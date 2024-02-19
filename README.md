@@ -1,11 +1,15 @@
 # sockets_simple
 Sample work with sockets between server and client apps for *nix (linux, MacOS etc.)
 
-Данный код был сделан для того, чтобы потренироваться в использовании межпроцессного взаимодействия ОС Unix.
-Первый класс serversocketexchange.py - предназначен для симулирования работы сервера
-Второй класс clientsocketexchange.py - предназначен для симулирования работы клиента
+This code was made to practice using Linux/Unix OS interprocess communication.
+The first class, serversocketexchange.py - is intended to simulate server work
+The second class, clientsocketexchange.py - is intended to simulate the work of the client.
 
-Необходимо запустить serversocketexchange.py, указав в коде (в разделе if __name__ == '__main__':...), при создании экземпляра сервера - путь к файлу-сокету, который будет создаваться по протоколу UNIX. Тот же самый путь необходимо указать в подобном разделе clientsocketexchange.py. Также в clientsocketexchange.py можно написать своё собственное сообщение (не обязательно 'Hello world', можно использовать буквы другого алфавита, то что подходит для UTF-8) и запустить в другом терминале (так как сервер в данный момент должен работать).
-В итоге на стороне сервера появится необходимое сообщение.
+It is necessary to run serversocketexchange.py, specifying in the code in the section 
+```py
+if __name__ == '__main__':...
+```
+when creating a server instance - the path to the socket file will be created using the UNIX protocol. The same path should be specified in a similar section of clientsocketexchange.py. Also in clientsocketexchange.py you can write your own message (not necessarily 'Hello world', you can use letters of other alphabet, what is suitable for UTF-8) and run it in another terminal (as the server should be running at the moment).
+As a result, the necessary message will appear on the server side.
 
-Методы .encode и .decode для передаваемых сообщений используются в методах hear() и say() обоих классов, так как при работе с сокетом происходит обмен байтами, по этому необходимо использовать декодирование и кодирование.
+The .encode and .decode methods are used in the hear() and say() methods of both classes for transmitted messages, since bytes are exchanged when working with the socket, so decoding and encoding must be used.
