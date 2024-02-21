@@ -1,5 +1,6 @@
-# sockets_simple
-Sample work with sockets between server and client apps for *nix (linux, MacOS etc.)
+# Example of socket implementation
+
+Simple work with sockets between server and client apps for *nix (linux, MacOS etc.)
 
 This code was made to practice using Linux/Unix OS interprocess communication.
 The first class, serversocketexchange.py - is intended to simulate server work
